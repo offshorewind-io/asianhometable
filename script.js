@@ -35,9 +35,10 @@ form.addEventListener('submit', (event) => {
   const formData = new FormData(form);
   const name = formData.get('name').trim();
   const email = formData.get('email').trim();
+  const phone = formData.get('phone').trim();
   const message = formData.get('message').trim();
   const subject = `Private dining inquiry from ${name}`;
-  const body = `Name: ${name}\nEmail: ${email}\n\nEvent details:\n${message}`;
+  const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nEvent details:\n${message}`;
 
   window.location.href = `mailto:asianhometable@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   status.textContent = 'Your email app should open with the inquiry ready to send.';
