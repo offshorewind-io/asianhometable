@@ -75,6 +75,22 @@ em { color: var(--coral); font-style: normal; }
 .image-card-content { inset: 0; padding: 30px; position: absolute; z-index: 1; }
 .image-card-content h3 { margin-top: 80px; }
 .image-card-content h3 em { color: #f1c56f; }
+.menu-list { border-top: 1px solid var(--line); margin-top: 80px; padding-top: 55px; }
+.menu-list-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 38px; }
+.menu-list-heading .eyebrow { margin-bottom: 8px; }
+.menu-list-heading .body-copy { margin: 0; max-width: 440px; }
+.menu-groups { display: grid; gap: 22px; grid-template-columns: 1fr 1fr; }
+.menu-group { background: var(--paper); padding: 31px 30px 14px; }
+.menu-group h3 { color: var(--coral); font: 500 31px/.95 var(--serif); margin: 0 0 24px; }
+.menu-group-main { grid-row: span 2; }
+.menu-group-main h3 { color: var(--ink); }
+.menu-group-dessert { background: var(--yellow); }
+.menu-group-dessert h3 { color: var(--ink); }
+.menu-item { border-top: 1px solid var(--line); padding: 17px 0 14px; }
+.menu-group-dessert .menu-item { border-top-color: rgba(30,41,37,.25); }
+.menu-item h4 { font: 600 17px/1.2 var(--sans); margin: 0 0 7px; }
+.menu-item p { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 0; max-width: 520px; }
+.menu-group-dessert .menu-item p { color: var(--ink); }
 .process { background: var(--paper); }
 .process-layout { display: grid; gap: 13vw; grid-template-columns: 1fr 1.2fr; margin-top: 85px; }
 .process-layout h2 { font-size: 55px; }
@@ -118,6 +134,11 @@ blockquote em { color: #f1c56f; }
   .menus-heading .body-copy { margin-top: 28px; }
   .menu-grid { grid-template-columns: 1fr; }
   .menu-card { min-height: 360px; }
+  .menu-list { margin-top: 60px; padding-top: 45px; }
+  .menu-list-heading { align-items: start; display: block; }
+  .menu-list-heading .body-copy { margin-top: 25px; }
+  .menu-groups { display: block; }
+  .menu-group { margin-bottom: 18px; padding: 26px 22px 10px; }
   .process-layout { margin-top: 50px; }
   .process-layout h2 { font-size: 47px; margin-bottom: 60px; }
   blockquote { font-size: 38px; }
