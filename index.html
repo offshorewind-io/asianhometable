@@ -63,30 +63,33 @@
         <p class="body-copy">Our menus are a starting point, not a rulebook. Tell us who is coming, what you love, and how you want the evening to feel.</p>
       </div>
       <div class="menu-grid">
-        <article class="menu-card menu-card-dark">
+        <button class="menu-card menu-card-dark menu-category-card is-active" type="button" data-category="starters" aria-controls="menu-preview-starters" aria-pressed="true">
           <span class="card-number">01</span>
-          <h3>Feast<br /><em>family style</em></h3>
-          <p>Big platters, bold flavours, and plenty for everyone to reach for.</p>
-          <span class="card-arrow">↗</span>
-        </article>
-        <article class="menu-card menu-card-image">
+          <h3>Bright<br /><em>starters</em></h3>
+          <p>Fresh, crisp, and made to open the table with something delicious.</p>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="menu-card menu-card-image menu-category-card" type="button" data-category="mains" aria-controls="menu-preview-mains" aria-pressed="false">
           <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1000&q=85" alt="Steamed dumplings ready to share" loading="lazy" />
-          <div class="image-card-content"><span class="card-number">02</span><h3>Little<br /><em>luxuries</em></h3><p>Polished bites and beautiful details for evenings with a little more sparkle.</p><span class="card-arrow">↗</span></div>
-        </article>
-        <article class="menu-card menu-card-yellow">
+          <div class="image-card-content"><span class="card-number">02</span><h3>Generous<br /><em>mains</em></h3><p>Slow-cooked, char-grilled, and served for everyone to reach for.</p><span class="card-arrow" aria-hidden="true">↗</span></div>
+        </button>
+        <button class="menu-card menu-card-yellow menu-category-card" type="button" data-category="desserts" aria-controls="menu-preview-desserts" aria-pressed="false">
           <span class="card-number">03</span>
-          <h3>Sunday<br /><em>comforts</em></h3>
-          <p>The food that makes you slow down, get comfortable, and stay for dessert.</p>
-          <span class="card-arrow">↗</span>
-        </article>
+          <h3>Sweet<br /><em>finish</em></h3>
+          <p>The final little pleasure, from caramelised banana to cool mango.</p>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </button>
       </div>
-      <div class="menu-list" aria-label="Current menu">
+      <div class="menu-list" aria-label="Current menu" id="menu-preview">
         <div class="menu-list-heading">
-          <p class="eyebrow">The current table</p>
-          <p class="body-copy">A generous spread of Filipino, Southeast Asian, and Chinese-inspired favourites. We can adapt the menu for your guests and occasion.</p>
+          <div>
+            <p class="eyebrow">Recipe preview</p>
+            <p class="menu-preview-label" aria-live="polite">Bright starters</p>
+          </div>
+          <p class="body-copy">Choose a course above to preview the dishes. We can adapt the menu for your guests and occasion.</p>
         </div>
         <div class="menu-groups">
-          <article class="menu-group">
+          <article class="menu-group is-visible" id="menu-preview-starters" data-category="starters">
             <h3>Starters</h3>
             <div class="menu-items">
               <div class="menu-item">
@@ -107,7 +110,7 @@
               </div>
             </div>
           </article>
-          <article class="menu-group menu-group-main">
+          <article class="menu-group menu-group-main" id="menu-preview-mains" data-category="mains">
             <h3>Main dishes</h3>
             <div class="menu-items">
               <div class="menu-item">
@@ -140,7 +143,7 @@
               </div>
             </div>
           </article>
-          <article class="menu-group menu-group-dessert">
+          <article class="menu-group menu-group-dessert" id="menu-preview-desserts" data-category="desserts">
             <h3>Desserts</h3>
             <div class="menu-items">
               <div class="menu-item">

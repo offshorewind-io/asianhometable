@@ -2,6 +2,33 @@ const form = document.querySelector('#inquiry-form');
 const status = document.querySelector('.form-status');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
+const categoryCards = document.querySelectorAll('.menu-category-card');
+const menuGroups = document.querySelectorAll('.menu-group');
+const menuPreviewLabel = document.querySelector('.menu-preview-label');
+
+const categoryNames = {
+  starters: 'Bright starters',
+  mains: 'Generous mains',
+  desserts: 'Sweet finish',
+};
+
+categoryCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    const selectedCategory = card.dataset.category;
+
+    categoryCards.forEach((categoryCard) => {
+      const isSelected = categoryCard === card;
+      categoryCard.classList.toggle('is-active', isSelected);
+      categoryCard.setAttribute('aria-pressed', String(isSelected));
+    });
+
+    menuGroups.forEach((group) => {
+      group.classList.toggle('is-visible', group.dataset.category === selectedCategory);
+    });
+
+    menuPreviewLabel.textContent = categoryNames[selectedCategory];
+  });
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();

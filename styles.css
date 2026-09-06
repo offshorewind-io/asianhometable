@@ -60,6 +60,11 @@ em { color: var(--coral); font-style: normal; }
 .menus-heading .body-copy { margin-bottom: 8px; }
 .menu-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
 .menu-card { min-height: 400px; padding: 30px; position: relative; }
+.menu-category-card { border: 0; color: inherit; cursor: pointer; font-family: inherit; text-align: left; transition: transform .2s ease, box-shadow .2s ease; }
+.menu-category-card:hover, .menu-category-card:focus-visible { box-shadow: 0 12px 28px rgba(30,41,37,.14); transform: translateY(-4px); }
+.menu-category-card:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+.menu-category-card:not(.is-active) { opacity: .82; }
+.menu-category-card.is-active { opacity: 1; }
 .menu-card h3 { font: 500 39px/.94 var(--serif); letter-spacing: -.03em; margin: 80px 0 22px; }
 .menu-card h3 em { color: inherit; }
 .menu-card p { bottom: 30px; font-size: 13px; line-height: 1.5; max-width: 210px; position: absolute; }
@@ -78,9 +83,11 @@ em { color: var(--coral); font-style: normal; }
 .menu-list { border-top: 1px solid var(--line); margin-top: 80px; padding-top: 55px; }
 .menu-list-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 38px; }
 .menu-list-heading .eyebrow { margin-bottom: 8px; }
+.menu-preview-label { font: 500 31px/.95 var(--serif); margin: 0; }
 .menu-list-heading .body-copy { margin: 0; max-width: 440px; }
 .menu-groups { display: grid; gap: 22px; grid-template-columns: 1fr 1fr; }
 .menu-group { background: var(--paper); padding: 31px 30px 14px; }
+.menu-group:not(.is-visible) { display: none; }
 .menu-group h3 { color: var(--coral); font: 500 31px/.95 var(--serif); margin: 0 0 24px; }
 .menu-group-main { grid-row: span 2; }
 .menu-group-main h3 { color: var(--ink); }
@@ -137,6 +144,7 @@ blockquote em { color: #f1c56f; }
   .menu-list { margin-top: 60px; padding-top: 45px; }
   .menu-list-heading { align-items: start; display: block; }
   .menu-list-heading .body-copy { margin-top: 25px; }
+  .menu-preview-label { font-size: 28px; }
   .menu-groups { display: block; }
   .menu-group { margin-bottom: 18px; padding: 26px 22px 10px; }
   .process-layout { margin-top: 50px; }
